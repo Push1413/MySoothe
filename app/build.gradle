@@ -89,16 +89,3 @@ ktlint{
         reporter "checkstyle"
     }
 }
-
-task installGitHook(type: Copy) {
-    def suffix = "macos"
-    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
-        suffix = "windows"
-    }
-    from new File(rootProject.rootDir, "scripts/pre-push-$suffix")
-    into { new File(rootProject.rootDir, '.git/hooks') }
-    rename("pre-push-$suffix", 'pre-push')
-    fileMode 0775
-}
-
-tasks.getByPath(':app:preBuild').dependsOn installGitHook
