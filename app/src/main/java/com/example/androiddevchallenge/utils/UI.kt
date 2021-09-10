@@ -3,15 +3,44 @@ package com.example.androiddevchallenge.utils
 import android.content.res.Configuration
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.material.*
+import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.ui.theme.MyTheme
+
+@Composable
+fun MySootheTextField(
+    label: String,
+    modifier: Modifier = Modifier,
+    leadingIcon: ImageVector? = null
+) {
+    val state = rememberSaveable {
+        mutableStateOf("")
+    }
+
+    OutlinedTextField(
+        value = state.value,
+        onValueChange = {
+            state.value = it
+        },
+        label = {
+            Text(text = label)
+        },
+        modifier = modifier.fillMaxWidth(),
+        leadingIcon = {
+            if (leadingIcon != null) {
+                Icon(
+                    imageVector = leadingIcon,
+                    contentDescription = null
+                )
+            }
+        }
+    )
+}
 
 @Composable
 fun MySootheButton(
@@ -44,10 +73,13 @@ fun MySootheButton(
 @Composable
 private fun DefaultPreview() {
     MyTheme {
-        MySootheButton(
-            onClick = {},
-            buttonText = "Btn Test",
-            backgroundColor = MaterialTheme.colors.background
+//        MySootheButton(
+//            onClick = {},
+//            buttonText = "Btn Test",
+//            backgroundColor = MaterialTheme.colors.background
+//        )
+        MySootheTextField(
+            label = "Test"
         )
     }
 }
