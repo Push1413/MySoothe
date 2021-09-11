@@ -7,6 +7,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.androiddevchallenge.screens.HomeScreen
 import com.example.androiddevchallenge.screens.LoginScreen
 import com.example.androiddevchallenge.screens.WelcomeScreen
 import com.example.androiddevchallenge.ui.theme.MyTheme
@@ -27,7 +28,8 @@ class MainActivity : AppCompatActivity() {
 fun MyApp() {
     Surface(color = MaterialTheme.colors.background) {
 //        WelcomeScreen()
-        LoginScreen()
+//        LoginScreen()
+        HomeScreen()
     }
 }
 
