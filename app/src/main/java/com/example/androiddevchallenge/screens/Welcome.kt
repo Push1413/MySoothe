@@ -17,12 +17,15 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.navigate
+import androidx.navigation.compose.rememberNavController
 import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.ui.theme.MyTheme
 import com.example.androiddevchallenge.utils.MySootheButton
 
 @Composable
-fun WelcomeScreen() {
+fun WelcomeScreen(navController: NavController) {
     val isLight = MaterialTheme.colors.isLight
     // by default setting resources value as per dark theme.
     var backgroundResource = R.drawable.ic_dark_welcome
@@ -34,11 +37,11 @@ fun WelcomeScreen() {
 
     WelcomeBackground(backgroundResource)
 
-    ScreenContent(backgroundLogo)
+    ScreenContent(backgroundLogo,navController)
 }
 
 @Composable
-private fun ScreenContent(backgroundLogo: Int) {
+private fun ScreenContent(backgroundLogo: Int,navController:NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -54,14 +57,14 @@ private fun ScreenContent(backgroundLogo: Int) {
         Spacer(modifier = Modifier.height(32.dp))
 
         MySootheButton(
-            onClick = {},
+            onClick = {navController.navigate("login")},
             buttonText = "SIGN UP"
         )
 
         Spacer(modifier = Modifier.height(8.dp))
 
         MySootheButton(
-            onClick = {},
+            onClick = {navController.navigate("login")},
             buttonText = "LOG IN",
             backgroundColor = MaterialTheme.colors.secondary,
         )
@@ -93,7 +96,7 @@ private fun WelcomeScreenPreview() {
         Surface(
             modifier = Modifier.fillMaxSize()
         ) {
-            WelcomeScreen()
+            WelcomeScreen(navController = rememberNavController())
         }
     }
 }

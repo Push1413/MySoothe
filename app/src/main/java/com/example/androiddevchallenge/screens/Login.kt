@@ -17,13 +17,16 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.navigate
+import androidx.navigation.compose.rememberNavController
 import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.ui.theme.MyTheme
 import com.example.androiddevchallenge.utils.MySootheButton
 import com.example.androiddevchallenge.utils.MySootheTextField
 
 @Composable
-fun LoginScreen() {
+fun LoginScreen(navController: NavController) {
     var backgroundResource = R.drawable.ic_dark_login
     val isLight = MaterialTheme.colors.isLight
     if (isLight) {
@@ -31,11 +34,11 @@ fun LoginScreen() {
     }
     LoginBackground(backgroundResource)
 
-    LoginContent()
+    LoginContent(navController)
 }
 
 @Composable
-fun LoginContent() {
+fun LoginContent(navController:NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -59,7 +62,7 @@ fun LoginContent() {
         Spacer(modifier = Modifier.height(8.dp))
 
         MySootheButton(
-            onClick = {},
+            onClick = {navController.navigate("home")},
             buttonText = "LOG IN"
         )
 
@@ -117,7 +120,7 @@ private fun DefaultPreview() {
         Surface(
             modifier = Modifier.fillMaxSize()
         ) {
-            LoginScreen()
+            LoginScreen(navController = rememberNavController())
         }
 
     }

@@ -10,6 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.androiddevchallenge.data.*
 import com.example.androiddevchallenge.navigation.BottomNavigation1
 import com.example.androiddevchallenge.ui.theme.MyTheme
@@ -18,7 +20,7 @@ import com.example.androiddevchallenge.utils.FavoriteCollectionRow
 import com.example.androiddevchallenge.utils.MySootheTextField
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(navController: NavController) {
     Scaffold(
         bottomBar = {
             BottomNavigation1()
@@ -35,19 +37,21 @@ fun HomeScreen() {
         isFloatingActionButtonDocked = true
     ) {
         HomeScreenContent(
-            modifier = Modifier.padding(it)
+            modifier = Modifier.padding(it),
+            navController
         )
     }
 }
 
 @Composable
 private fun HomeScreenContent(
-    modifier: Modifier
+    modifier: Modifier,
+    navController:NavController
 ) {
     Column(
         modifier = modifier
     ) {
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(30.dp))
 
         SearchBox()
 
@@ -139,7 +143,7 @@ private fun DefaultPreview() {
         Surface(
             modifier = Modifier.fillMaxSize()
         ) {
-            HomeScreen()
+            HomeScreen(navController = rememberNavController())
         }
 
     }
