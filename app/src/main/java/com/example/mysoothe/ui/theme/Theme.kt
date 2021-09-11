@@ -1,4 +1,4 @@
-package com.example.androiddevchallenge.ui.theme
+package com.example.mysoothe.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

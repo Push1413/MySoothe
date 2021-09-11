@@ -1,7 +1,6 @@
-package com.example.androiddevchallenge.utils
+package com.example.mysoothe.utils
 
 import android.content.res.Configuration
-import android.graphics.drawable.shapes.Shape
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -10,7 +9,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -20,11 +18,10 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.androiddevchallenge.data.Collection
-import com.example.androiddevchallenge.data.alignYourBodyCollections
-import com.example.androiddevchallenge.data.favoriteCollectionsOne
-import com.example.androiddevchallenge.ui.theme.MyTheme
-import com.example.androiddevchallenge.ui.theme.Shapes
+import com.example.mysoothe.data.Collection
+import com.example.mysoothe.data.alignYourBodyCollections
+import com.example.mysoothe.data.favoriteCollectionsOne
+import com.example.mysoothe.ui.theme.MyTheme
 
 @Composable
 fun FavoriteCollectionRow(

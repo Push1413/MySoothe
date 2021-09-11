@@ -1,4 +1,4 @@
-package com.example.androiddevchallenge.navigation
+package com.example.mysoothe.navigation
 
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons

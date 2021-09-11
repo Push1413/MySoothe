@@ -1,11 +1,11 @@
-package com.example.androiddevchallenge.ui.theme
+package com.example.mysoothe.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.sp
-import com.example.androiddevchallenge.R
+import com.example.mysoothe.R
 
 private val KulimParkLight = FontFamily(Font(R.font.kulim_park_light))
 private val KulimParkRegular = FontFamily(Font(R.font.kulim_park_regular))

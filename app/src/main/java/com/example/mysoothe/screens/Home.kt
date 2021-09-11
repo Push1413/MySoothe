@@ -1,4 +1,4 @@
-package com.example.androiddevchallenge.screens
+package com.example.mysoothe.screens
 
 import android.content.res.Configuration
 import androidx.compose.foundation.layout.*
@@ -12,12 +12,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.example.androiddevchallenge.data.*
-import com.example.androiddevchallenge.navigation.BottomNavigation1
-import com.example.androiddevchallenge.ui.theme.MyTheme
-import com.example.androiddevchallenge.utils.AlignYourBodyRow
-import com.example.androiddevchallenge.utils.FavoriteCollectionRow
-import com.example.androiddevchallenge.utils.MySootheTextField
+import com.example.mysoothe.data.*
+import com.example.mysoothe.navigation.BottomNavigation1
+import com.example.mysoothe.ui.theme.MyTheme
+import com.example.mysoothe.utils.AlignYourBodyRow
+import com.example.mysoothe.utils.FavoriteCollectionRow
+import com.example.mysoothe.utils.MySootheTextField
 
 @Composable
 fun HomeScreen(navController: NavController) {

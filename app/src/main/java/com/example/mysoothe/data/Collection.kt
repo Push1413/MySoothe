@@ -1,6 +1,6 @@
-package com.example.androiddevchallenge.data
+package com.example.mysoothe.data
 
-import com.example.androiddevchallenge.R
+import com.example.mysoothe.R
 
 data class Collection(
     val name: String,

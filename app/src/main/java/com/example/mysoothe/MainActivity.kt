@@ -1,4 +1,4 @@
-package com.example.androiddevchallenge
+package com.example.mysoothe
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -10,10 +10,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.androiddevchallenge.screens.HomeScreen
-import com.example.androiddevchallenge.screens.LoginScreen
-import com.example.androiddevchallenge.screens.WelcomeScreen
-import com.example.androiddevchallenge.ui.theme.MyTheme
+import com.example.mysoothe.screens.HomeScreen
+import com.example.mysoothe.screens.LoginScreen
+import com.example.mysoothe.screens.WelcomeScreen
+import com.example.mysoothe.ui.theme.MyTheme
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

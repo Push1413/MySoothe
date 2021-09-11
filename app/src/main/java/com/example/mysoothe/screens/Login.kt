@@ -1,4 +1,4 @@
-package com.example.androiddevchallenge.screens
+package com.example.mysoothe.screens
 
 import android.content.res.Configuration
 import androidx.compose.foundation.Image
@@ -20,10 +20,10 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.navigate
 import androidx.navigation.compose.rememberNavController
-import com.example.androiddevchallenge.R
-import com.example.androiddevchallenge.ui.theme.MyTheme
-import com.example.androiddevchallenge.utils.MySootheButton
-import com.example.androiddevchallenge.utils.MySootheTextField
+import com.example.mysoothe.R
+import com.example.mysoothe.ui.theme.MyTheme
+import com.example.mysoothe.utils.MySootheButton
+import com.example.mysoothe.utils.MySootheTextField
 
 @Composable
 fun LoginScreen(navController: NavController) {

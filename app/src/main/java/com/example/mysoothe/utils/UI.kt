@@ -1,4 +1,4 @@
-package com.example.androiddevchallenge.utils
+package com.example.mysoothe.utils
 
 import android.content.res.Configuration
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.androiddevchallenge.ui.theme.MyTheme
+import com.example.mysoothe.ui.theme.MyTheme
 
 @Composable
 fun MySootheTextField(
