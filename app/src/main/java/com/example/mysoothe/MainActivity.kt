@@ -35,13 +35,13 @@ fun MyApp() {
             navController = navController,
             startDestination = "welcome"
         ) {
-            composable(route = "welcome"){
+            composable(route = "welcome") {
                 WelcomeScreen(navController)
             }
-            composable(route = "login"){
+            composable(route = "login") {
                 LoginScreen(navController)
             }
-            composable(route = "home"){
+            composable(route = "home") {
                 HomeScreen(navController)
             }
         }

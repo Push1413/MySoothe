@@ -36,11 +36,11 @@ fun WelcomeScreen(navController: NavController) {
 
     WelcomeBackground(backgroundResource)
 
-    ScreenContent(backgroundLogo,navController)
+    ScreenContent(backgroundLogo, navController)
 }
 
 @Composable
-private fun ScreenContent(backgroundLogo: Int,navController:NavController) {
+private fun ScreenContent(backgroundLogo: Int, navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -56,14 +56,14 @@ private fun ScreenContent(backgroundLogo: Int,navController:NavController) {
         Spacer(modifier = Modifier.height(32.dp))
 
         MySootheButton(
-            onClick = {navController.navigate("login")},
+            onClick = { navController.navigate("login") },
             buttonText = "SIGN UP"
         )
 
         Spacer(modifier = Modifier.height(8.dp))
 
         MySootheButton(
-            onClick = {navController.navigate("login")},
+            onClick = { navController.navigate("login") },
             buttonText = "LOG IN",
             backgroundColor = MaterialTheme.colors.secondary,
         )

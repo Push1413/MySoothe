@@ -7,7 +7,7 @@ import androidx.compose.material.icons.filled.Spa
 import androidx.compose.runtime.Composable
 
 @Composable
- fun BottomNavigation1() {
+fun BottomNavigation1() {
     BottomAppBar(
         backgroundColor = MaterialTheme.colors.background,
     ) {

@@ -46,7 +46,7 @@ fun HomeScreen(navController: NavController) {
 @Composable
 private fun HomeScreenContent(
     modifier: Modifier,
-    navController:NavController
+    navController: NavController
 ) {
     Column(
         modifier = modifier
@@ -97,7 +97,6 @@ private fun AlignBodyBox() {
     )
 }
 
-
 @Composable
 private fun FavoriteCollectionBox() {
     Text(
@@ -145,6 +144,5 @@ private fun DefaultPreview() {
         ) {
             HomeScreen(navController = rememberNavController())
         }
-
     }
 }

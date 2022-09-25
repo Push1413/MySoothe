@@ -37,7 +37,7 @@ fun LoginScreen(navController: NavController) {
 }
 
 @Composable
-fun LoginContent(navController:NavController) {
+fun LoginContent(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -61,13 +61,12 @@ fun LoginContent(navController:NavController) {
         Spacer(modifier = Modifier.height(8.dp))
 
         MySootheButton(
-            onClick = {navController.navigate("home")},
+            onClick = { navController.navigate("home") },
             buttonText = "LOG IN"
         )
 
         SignUpLabel()
     }
-
 }
 
 @Composable
@@ -121,6 +120,5 @@ private fun DefaultPreview() {
         ) {
             LoginScreen(navController = rememberNavController())
         }
-
     }
 }

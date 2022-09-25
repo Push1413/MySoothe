@@ -43,30 +43,29 @@ fun AlignYourBodyRow(collections: List<Collection>) {
             AlignRowItem(collection)
         }
     }
-
 }
 
 @Composable
 fun AlignRowItem(
     collection: Collection
 ) {
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            modifier = Modifier.background(color = MaterialTheme.colors.background)
-        ) {
-            Image(
-                painterResource(id = collection.imageRes),
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .size(88.dp)
-                    .clip(CircleShape)
-            )
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier.background(color = MaterialTheme.colors.background)
+    ) {
+        Image(
+            painterResource(id = collection.imageRes),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .size(88.dp)
+                .clip(CircleShape)
+        )
 
-            Text(
-                collection.name
-            )
-        }
+        Text(
+            collection.name
+        )
+    }
 }
 
 @Composable
@@ -95,11 +94,8 @@ fun CollectionRowItem(
                 collection.name,
                 modifier = Modifier.weight(1F)
             )
-
         }
-
     }
-
 }
 
 @Preview(
